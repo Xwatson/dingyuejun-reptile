@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+      <button id="getMovieType">获取电影类型</button>
+
+  <script>
+    $(function () {
+        $('#getMovieType').click(function () {
+            $.post('/api/movieType',{
+
+            },function (data) {
+                console.log(data)
+            });
+        })
+    })
+  </script>
+  </body>
+</html>
